@@ -5,18 +5,18 @@
 
 class SS {
 public:
-	SS(int size);
-	void ShellSort();
-	void AddNumToArr(int num);
-	int GetNumComp() { return numComparisons; }
-	int GetNumMoved() { return numItemsMoved; }
+	SS(int size); //constructor
+	void ShellSort(); //performs the sort
+	void AddNumToArr(int num); //adds a random number into the array
+	int GetNumComp() { return numComparisons; } //returns the number of comparisons performed by the sort
+	int GetNumMoved() { return numElementsMoved; } //returns the number of elements moved during the sort
 
 private:
-	int length;
-	int array[MAX_SIZE];
+	int length; //the actual length on the array
+	int array[MAX_SIZE]; //array of max size
 	int numComparisons = 0;
-	int nextOpenIndex = 0;
-	int numItemsMoved = 0;
+	int nextOpenIndex = 0; //used for inserting elements into the array
+	int numElementsMoved = 0;
 };
 
 #endif
